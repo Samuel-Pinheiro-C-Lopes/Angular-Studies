@@ -1,0 +1,57 @@
+
+p {
+    margin-top: 0.5%;
+}
+
+.title {
+    text-align: center;
+}
+
+div {
+    margin-top: 1%;
+}
+
+.multi-buttons {
+    display:flex;
+    flex-wrap: nowrap;
+}
+
+.multi-buttons button {
+    width: 100%;
+    margin-right: 2%;
+}
+
+.input-btn {
+    display: flex;
+    flex-flow: nowrap;
+}
+
+.inputt {
+    background-color: rgba(0, 0, 0, 0.13);
+    color: white;
+    font-size: 1rem;
+    text-shadow: -1px -1px 2px #000, 2px -1px 2px #000, -1px 1px 2px #000, 2px 1px 2px #000;
+}
+
+.input-btn input {
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.13);
+    color: white;
+    font-size: 1rem;
+    text-shadow: -1px -1px 2px #000, 2px -1px 2px #000, -1px 1px 2px #000, 2px 1px 2px #000;
+}
+
+.input-btn button {
+    margin-left: 2%;
+    width: 28%;
+}
+
+.modal-window {
+    background-color: rgba(15, 10, 39, 0.795);
+    border-style: groove;
+    border-color: rgba(255, 255, 255, 0.555);
+}
+
+.modal-shadow { 
+    background-color: rgba(0, 0, 0, 0.267);
+}

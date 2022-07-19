@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 class="title">Data Binding with String Interpolation</h5>
+            <div>
+                <h6>With string interpolation, we can...</h6>
+                <p>using double bracket notation to use a determined variable within our exported class to create dinamic data mutation.</p>
+                <p>this only happens while using forms module, from Angular/core, wich provides the ngModel directive.</p>
+                <div class="input-btn">    
+                    <input
+                        class="form-control"
+                        [(ngModel)] = "strings_interpolating[0]"/>
+                    <button 
+                        class="btn btn-primary"
+                        (click) = "strings_interpolating[0] = ''">Reset Data</button>
+                </div>
+                <p>As you can see here: {{ strings_interpolating[0] }}</p>
+            </div>
+            <hr />
+            <h5 class="title">Data Binding with Property Binding</h5>
+            <div>
+                <h6>With property binding, we can...</h6>
+                <p>use the disabled property of a button and typeScript logic to enhace the website and have a dinamic button.</p>
+                <div class="input-btn">    
+                    <input
+                        class="form-control"
+                        type="text"
+                        [(ngModel)] = "strings_interpolating[1]"/>
+                    <button
+                        class="btn btn-primary"
+                        [disabled] = "strings_interpolating[1] === '' ? true : false"
+                        (click) = "strings_interpolating[1] = ''">Reset Data</button>
+                </div>
+                <p *ngIf = "strings_interpolating[1]">This will be deleted as well, using this and ngIf logic.</p>
+            </div>
+            <hr />
+            <h5 class="title">Data Binding versus String Interpolation</h5>
+            <div>
+                <p>If you want to change a property, property binding is the way to chose. If you want to change the text displayed, string interpolation can do the trick!</p>
+                <p>Of course you could use property binding to do what String Interpolation does.</p>
+                <div class="input-btn">
+                    <input
+                        class="form-control"
+                        [(ngModel)] = "text"
+                    />
+                    <button
+                        class="btn btn-primary"
+                        (click) = "paragraphText = text"
+                        *ngIf = "!paragraphText; else changeText"    
+                    >Create Paragraph</button>
+                    <ng-template #changeText>
+                        <button
+                        class="btn btn-primary"
+                        (click) = "paragraphText = text"    
+                        >Change Paragraph</button>
+                    </ng-template>
+                </div>
+                <p [innerText] = "paragraphText"></p>
+                <hr/>
+                <p>but, we can as well use (input), $event, and a function to do exactly what string interpolation does! =)</p>
+                <div class="input-btn">    
+                    <input
+                        class="form-control"
+                        (input) = "paragraphChanger($event)"
+                    />
+                    <!-- <button
+                        class="btn btn-primary"
+                    >Reset Data!</button> -->
+                </div>
+                <p [innerText] = "paragraphText2"></p>
+            </div>
+        </div>
+    </div>
+</div>

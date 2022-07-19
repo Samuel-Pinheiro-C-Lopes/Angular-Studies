@@ -1,0 +1,16 @@
+<div class="container">
+    <p>The button "create blueprint" will create a panel with blue background color at the top, while "create server"
+    will create a panel with red background color at the top, as well with red font color at the bottom. Both have
+    different font families.</p>
+    <app-cockpit 
+    (serverCreated) = "onServerAdded($event)"
+    (blueprintCreated) = "onBlueprintAdded($event)"></app-cockpit>
+    <hr />
+    <div class="row">
+        <div class="col-xs-12">
+           <app-server-element 
+           *ngFor = "let serverElement of serverElements"
+           [svrElement] = "serverElement"></app-server-element>     
+        </div>
+    </div>
+</div>

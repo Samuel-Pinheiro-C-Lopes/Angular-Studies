@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 class="title">Assignment Rules:</h5>
+            <ol>
+                <li>Add a button which says "Display Details".</li>
+                <li>Add a paragraph with any content of your chose (e.g. 'Secret Password = tuna').</li>
+                <li>Toggle the displaying of the paragraph with the button created in the first step.</li>
+                <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementig number).</li>
+                <li>Starting at the 5th log item, give all future log items a blue background color (via ngStyle) and white color (ngClass).</li>
+            </ol>
+            <hr />
+            <h5 class="title">Resolution</h5>
+                <button
+                class="btn btn-primary" 
+                style="width: 100%;"
+                (click) = "displaySecret = displaySecret ? false : true; btnsClicked.push(btnsClicked.length); createPassword()"
+                >Display Details</button>
+                <p *ngIf = "displaySecret">The secret password now is: {{ password }}</p>
+                <div 
+                style="text-align: center;">
+                    <p 
+                    *ngFor = "let num of btnsClicked;"
+                    [ngStyle] = "{background: btnsClicked.length >= 5 && num + 1 >= 5 ? 'blue' : 'none'}"
+                    [ngClass] = "{especialElements: btnsClicked.length >= 5 && num + 1 >= 5 }">Button click nº {{ num + 1 }}</p>
+                </div>
+        </div>
+    </div>
+</div>
+

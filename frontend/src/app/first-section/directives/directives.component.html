@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 class="title">Directives:</h5>
+            <div>
+                <p>We have several directives - whose aplications are distinct - proving to be very useful.
+                The first one I want to show is the *ngIf, wich works like an if statement, but changing the
+                structure of the html component (that's the reason it takes * before it).
+                </p>
+                <p>Paragraph bellow shall only be seen while the button is green, for example:</p> 
+                    <button 
+                    [innerText] = "btn_content"
+                    class="btn btn-primary"
+                    (click) = "btn_content = btn_content.slice(-1) === ')' ? 'I am red! =(' : 'I am green! =)'"
+                    [ngStyle] = "{backgroundColor: checkContent()}"></button>
+                <p *ngIf = "btn_content.slice(-1) === ')'">The button above is green!</p>
+                <hr />
+                <p>We can also use a ng-template with an else statement to the ngIf directive to work with
+                alternative text content, like bellow ("Right text" is printed as green, and every other content, red):
+                </p>
+                <div class="input-btn">   
+                    <input 
+                    [(ngModel)] = "input_1"
+                    class="form-control"/>
+                </div>
+                <p *ngIf = "input_1.toLowerCase() == 'right text'; else wrongText" class="par" style="color: green;">{{ input_1 }}</p>
+                <ng-template #wrongText>
+                    <p class="par" style="color: red;">{{ input_1 }}</p>
+                </ng-template>
+                <hr />
+                <p>We can as well use the ngStyle and ngClass to work with style on our HTML elements.
+                Using [ngStyle], we can set properties using functions exported in our components.ts, those functions
+                shall return the value needed for the CSS property.
+                </p>
+                <p>ngClass needs true or false, working as an object (like [ngStyle]) but with classes as
+                keys, and booleans as values.
+                </p>
+                <div class="multi-buttons">
+                    <button
+                        [disabled] = "active_button === 1"
+                        style="background-color: red;" 
+                        class="btn btn-primary _button3"
+                        (click) = "active_button = 1">Red Button</button>
+                    <button
+                        [disabled] = "active_button === 2"
+                        style="background-color: green;" 
+                        class="btn btn-primary _button3"
+                        (click) = "active_button = 2">Green Button</button>
+                    <button
+                        [disabled] = "active_button === 3"
+                        style="background-color: blue;" 
+                        class="btn btn-primary _button3"
+                        (click) = "active_button = 3">Blue Button</button>
+                </div>
+                <div 
+                [ngClass] = "{ 
+                class1: active_button === 1, 
+                class2: active_button === 2, 
+                class3: active_button === 3}">
+                    <div class= "divi" id="content_1">
+                        <h5 class="title">Sample Text</h5>
+                        <p>This content, background content, content properties and more will be changed 
+                        based in wich button is being pressed at the momement...</p>
+                        <p>This is a good showcase of how these directive can work together to form dynamic
+                        web aplications, as we can see here.
+                        </p>
+                        <h6 
+                        *ngIf = "active_button != 0">
+                        <span [ngStyle] = "{color: colorReturner()}">button {{ active_button }}</span> is being pressed</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

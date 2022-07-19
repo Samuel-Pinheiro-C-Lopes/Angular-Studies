@@ -1,0 +1,14 @@
+<div class=row>
+    <h4 class="title">Components Separation</h4>
+    <p>This will be a server creation aplication whose function is to create a server or a server blueprint
+    based on separated components, instead of programming logic focused only in one component.</p>
+    <label for="serverCreationApplication">
+        <div class="multi-buttons">
+            <button
+            class="btn btn-primary"
+            (click) = "showOnClick(0)"
+            >Server Creation Aplication</button>
+        </div>
+    </label>
+</div>
+<servers-creation-component *ngIf = "showWindow[0]"></servers-creation-component>

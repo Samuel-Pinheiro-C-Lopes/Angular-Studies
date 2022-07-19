@@ -1,0 +1,19 @@
+<div class="container_">
+  <div class="row">
+    <div class="col-xs-12">
+      <h4 class="title">Sections:</h4>
+      <div class="multi-buttons">
+        <button
+          class="btn btn-primary"
+          (click) = "showOnClick(0)"
+          [disabled] = "show[0]">The Basics</button>
+        <button
+          class="btn btn-primary"
+          (click) = "showOnClick(1)"
+          [disabled] = "show[1]">Components & Databinding Deep Drive</button>
+      </div>
+      <first-section *ngIf = "show[0] === true"></first-section>
+      <second-section *ngIf = "show[1] === true"></second-section>
+    </div>
+  </div>
+</div>

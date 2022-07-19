@@ -1,0 +1,18 @@
+
+<div
+    class="panel panel-default"
+    style="border: 2px solid rgb(207, 207, 207); margin-bottom: 1%;">
+    <div 
+        class="panel-heading"
+        [ngStyle]="{backgroundColor: element?.type === 'server' ? 'red' : 'blue'}"
+    >{{ element?.name }}</div>
+    <div class="panel-body"> 
+        <p style="margin: 0;">
+            <strong *ngIf = "element?.type === 'server'" style="color: red;">{{ element?.content 
+            }}</strong>
+            <em *ngIf = "element?.type === 'blueprint'">{{ element?.content }}</em>
+        </p>
+    </div>    
+</div>
+
+<div class="panel panel-default"></div>

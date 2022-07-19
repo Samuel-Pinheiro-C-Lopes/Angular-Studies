@@ -1,0 +1,9 @@
+<!-- <p
+[ngStyle] = "{backgroundColor: checkServer()}"
+>This server has been created! And it's <span (innerHTML) = "serverStatus"></span></p> -->
+<div>   
+    <p
+    [ngStyle] = "{backgroundColor: getColor()}"
+    [ngClass] = "{onlineClass: serverStatus === 'online'}"
+    >Server {{ serverName }} has been created, and it's currenctly: {{ serverStatus }}</p>
+</div>

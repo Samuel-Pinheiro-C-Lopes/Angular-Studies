@@ -1,0 +1,38 @@
+
+    <div class="row">
+      <div class="col-xs-12-">
+        <h4 class="title">Topics:</h4>
+        <div class="col-xs-12 multi-buttons">
+          <button 
+            class="btn btn-primary"
+            (click) = "showOnClick(0)"
+            [disabled] ="show[0]"
+          >Data Binding</button>
+          <button 
+            class="btn btn-primary"
+            (click) = "showOnClick(1)"
+            [disabled] ="show[1]"
+          >Event Binding</button>
+          <button 
+            class="btn btn-primary"
+            (click) = "showOnClick(2)"
+            [disabled] ="show[2]"
+          >Directives</button>
+          <button 
+            class="btn btn-primary"
+            (click) = "showOnClick(3)"
+            [disabled] ="show[3]"
+          >For Directive</button>
+          <button 
+            class="btn btn-primary"
+            (click) = "showOnClick(4)"
+            [disabled] ="show[4]"
+          >Assignment</button>
+        </div>
+        <app-data-binding *ngIf = "show[0]"></app-data-binding>
+        <app-event-binding *ngIf = "show[1]"></app-event-binding>
+        <app-directives *ngIf = "show[2]"></app-directives>
+        <app-for-directive *ngIf = "show[3]"></app-for-directive>
+        <app-assignment *ngIf = "show[4]"></app-assignment>
+      </div>
+    </div>

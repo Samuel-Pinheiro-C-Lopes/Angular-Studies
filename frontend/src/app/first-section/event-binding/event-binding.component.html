@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h5 class="title">Event Binding</h5>
+            <div>
+                <p>We have - in JavaScript - the onClick property 
+                for event handlers, but we can also use the click property to 
+                run a function or some specified piece of code, as we can 
+                see bellow...</p>
+                <button 
+                class="btn btn-primary" 
+                (click) = "createPhp($event); phpCreated= true" 
+                *ngIf = "!phpCreated; else phpDelete">Add Paragrapher!</button>
+                <ng-template #phpDelete>
+                    <button 
+                        class="btn btn-primary" 
+                        *ngIf = "phpCreated"
+                        [disabled] = "true"
+                        >Paragraph Created!</button>
+                </ng-template>
+                <hr />
+                <p>We can as well use property binding to enhace our code, 
+                using an event binding in the input bellow:</p>
+                <div class="input-btn">
+                    <input 
+                    type = "text"
+                    class="form-control"
+                    [disabled] = "!online"
+                    [(ngModel)] = "text_2"
+                    (input) = 'online ? onServerName($event) : ""'>
+                    <button 
+                    class="btn btn-primary"
+                    (click) = "online ? online = false : online = true; "
+                    [ngStyle] = "{backgroundColor: checkStatus()}"
+                    > {{ status }}</button>
+                </div>
+                <p>{{ text_1 }} <span *ngIf = "online">{{ text_2 }}</span></p>
+            </div>
+        </div>
+    </div>
+</div>

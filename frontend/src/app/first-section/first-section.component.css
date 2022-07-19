@@ -1,0 +1,18 @@
+div {
+    margin-top: 1%;
+}
+
+.input-btn {
+    display: flex;
+    flex-flow: nowrap;
+}
+
+.input-btn input {
+    width: 75%;
+    color: white;
+}
+
+.input-btn button {
+    margin-left: 2%;
+    width: 28%;
+}

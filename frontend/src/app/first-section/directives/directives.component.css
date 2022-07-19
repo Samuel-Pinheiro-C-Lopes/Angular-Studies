@@ -1,0 +1,59 @@
+.divi {
+
+    margin: 5% 3% 5% 3%;
+    
+    text-align: center;
+    
+    }
+    
+    .class1 {
+    
+    background-color: red;
+    
+    border-radius: 20%;
+    
+    border-style:ridge;
+    
+    border-color: rgba(0, 0, 0, 0.5);
+    
+    font-family: 'Courier New', Courier, monospace;
+    
+    }
+    
+    .class2 {
+    
+    background-color: green;
+    
+    border-radius: 20px;
+    
+    border-style: groove;
+    
+    border-color: rgba(252, 252, 252, 0.979);
+    
+    font-family:cursive;
+    
+    }
+    
+    .class3{
+    
+    background-color: blue;
+    
+    border-radius: 0px;
+    
+    border-style:double;
+    
+    border-color: rgba(236, 7, 198, 0.945);
+    
+    font-family:monospace;
+    
+    }
+    
+    span {
+    
+    font-size: 25px;
+    
+    -webkit-text-stroke-width: 1px;
+    
+    -webkit-text-stroke-color: #000
+    
+    }
