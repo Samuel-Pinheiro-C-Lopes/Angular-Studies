@@ -16,6 +16,9 @@ import { SecondSectionBindingComponent } from './second-section/Binding/binding.
 import { Servers_Creation_Component } from './second-section/Binding/Servers_Creation_Component/servers_creation.component';
 import { CockpitComponent } from './second-section/Binding/Servers_Creation_Component/cockpit/cockpit.component';
 import { ServerElementComponent } from './second-section/Binding/Servers_Creation_Component/server-element/server-element.component';
+import { AccountGenerationComponent } from './second-section/Binding/account-generation/account-generation.component';
+import { CharDataComponent } from './second-section/Binding/account-generation/char-data/char-data.component';
+import { CharComponentComponent } from './second-section/Binding/account-generation/char-component/char-component.component';
 
 
 @NgModule({
@@ -33,6 +36,9 @@ import { ServerElementComponent } from './second-section/Binding/Servers_Creatio
     Servers_Creation_Component,
     CockpitComponent,
     ServerElementComponent,
+    AccountGenerationComponent,
+    CharDataComponent,
+    CharComponentComponent,
   ],
   imports: [
     BrowserModule,

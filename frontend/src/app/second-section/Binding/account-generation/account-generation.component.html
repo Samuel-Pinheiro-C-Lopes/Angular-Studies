@@ -1,0 +1,10 @@
+<p>This is a practice tool created to reinforce the directives @Output and @Input used to 
+databind between component with Angular. Data passed in the "char-data" component are used by the "char-component" to create
+a sheet for a character.</p>
+
+<app-char-data></app-char-data>
+<div style="flex-wrap: wrap; display: flex;">
+    <app-char-component ~
+        *ngFor="let char of chars"
+    ></app-char-component>
+</div>

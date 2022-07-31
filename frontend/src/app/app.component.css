@@ -8,18 +8,29 @@ p {
 }
 
 div {
-    margin-top: 1%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
 }
 
-.multi-buttons {
-    display:flex;
+.multi-elements {
+    display: flex;
     flex-wrap: nowrap;
 }
 
-.multi-buttons button {
+.multi-elements * {
     width: 100%;
     margin-right: 2%;
 }
+
+@media (max-width: 567px) {
+    .multi-elements {
+        flex-wrap: wrap;
+    }
+    .multi-elements * {
+        width: 100%;
+        margin-bottom: 2%;
+    }
+  }
 
 .input-btn {
     display: flex;

@@ -3,12 +3,19 @@
     <p>This will be a server creation aplication whose function is to create a server or a server blueprint
     based on separated components, instead of programming logic focused only in one component.</p>
     <label for="serverCreationApplication">
-        <div class="multi-buttons">
+        <div class="multi-elements">
             <button
-            class="btn btn-primary"
-            (click) = "showOnClick(0)"
-            >Server Creation Aplication</button>
+                class="btn btn-primary"
+                (click) = "showOnClick(0)"
+            >
+            Server Creation Aplication</button>
+            <button
+                class="btn btn-primary"
+                (click) = "showOnClick(1)"
+            >
+            Character Creation Aplication</button>
         </div>
     </label>
 </div>
 <servers-creation-component *ngIf = "showWindow[0]"></servers-creation-component>
+<app-account-generation *ngIf = "showWindow[1]"></app-account-generation>

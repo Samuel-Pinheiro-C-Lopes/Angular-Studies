@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
     styleUrls: ['binding.component.css', '../../app.component.css'],
 })
 export class SecondSectionBindingComponent {
-    showWindow:boolean[] = [false]
+    showWindow:boolean[] = [false, false]
 
     constructor() {
 
@@ -16,10 +16,9 @@ export class SecondSectionBindingComponent {
         this.showWindow.forEach((_, i) => {
           if (i === num) {
             this.showWindow[i] = !this.showWindow[i];
-          };
-          // }else{
-          //   this.showWindow[i] = false;
-          // }
+          }else{
+            this.showWindow[i] = false;
+          }
         });
       };
 

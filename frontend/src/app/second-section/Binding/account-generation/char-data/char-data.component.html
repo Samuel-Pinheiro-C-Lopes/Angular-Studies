@@ -1,0 +1,29 @@
+<div>
+    <div class="col-12 multi-elements" style="padding-right: 25%;">
+        <label>Character Name</label>
+        <label>Passive Skill</label>
+        <label>Unique Skill</label>
+    </div>
+    <div class="multi-elements">
+        <input 
+            class="form-control inputt"
+            type="text"
+            [(ngModel)]="characterName"
+        >
+        <input 
+            class="form-control inputt"
+            type="text"
+            [(ngModel)]="characterPassive"
+        >
+        <input 
+            class="form-control inputt"
+            type="text"
+            [(ngModel)]="characterSkill"
+        >
+        <button
+            class="btn btn-outline-success"
+        >
+            Create Sheet
+        </button>
+    </div>
+</div>
