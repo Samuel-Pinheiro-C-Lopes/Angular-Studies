@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-char-data',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../../../../app.component.css', './char-data.component.css']
 })
 export class CharDataComponent implements OnInit {
+  @Output() charCreated = new EventEmitter<{charName: string, charPassive: string, charSkill: string}>()
 
   characterName: string = "";
   characterPassive: string = "";
   characterSkill: string = "";
+
+  onCharCreated() {
+    this.charCreated.emit({
+      charName: this.characterName,
+      charPassive: this.characterPassive,
+      charSkill: this.characterSkill
+    })
+  }
 
   constructor() { }
 

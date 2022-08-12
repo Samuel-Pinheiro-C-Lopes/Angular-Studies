@@ -13,12 +13,12 @@ import { ServersComponent } from './first-section/for-directive/servers/servers.
 import { AssignmentComponent } from './first-section/assignment/assignment.component';
 import { SecondSectionComponent } from './second-section/second-section.component'
 import { SecondSectionBindingComponent } from './second-section/Binding/binding.component';
-import { Servers_Creation_Component } from './second-section/Binding/Servers_Creation_Component/servers_creation.component';
-import { CockpitComponent } from './second-section/Binding/Servers_Creation_Component/cockpit/cockpit.component';
-import { ServerElementComponent } from './second-section/Binding/Servers_Creation_Component/server-element/server-element.component';
-import { AccountGenerationComponent } from './second-section/Binding/account-generation/account-generation.component';
-import { CharDataComponent } from './second-section/Binding/account-generation/char-data/char-data.component';
-import { CharComponentComponent } from './second-section/Binding/account-generation/char-component/char-component.component';
+import { ServersCreationComponent } from './second-section/Binding/servers-creation/servers-creation.component';
+import { CockpitComponent } from './second-section/Binding/servers-creation/cockpit/cockpit.component';
+import { ServerElementComponent } from './second-section/Binding/servers-creation/server-element/server-element.component';
+import { CharGenerationComponent } from './second-section/Binding/char-generation/char-generation.component';
+import { CharDataComponent } from './second-section/Binding/char-generation/char-data/char-data.component';
+import { CharComponentComponent } from './second-section/Binding/char-generation/char-component/char-component.component';
 
 
 @NgModule({
@@ -33,10 +33,10 @@ import { CharComponentComponent } from './second-section/Binding/account-generat
     AssignmentComponent,
     SecondSectionComponent,
     SecondSectionBindingComponent,
-    Servers_Creation_Component,
+    ServersCreationComponent,
     CockpitComponent,
     ServerElementComponent,
-    AccountGenerationComponent,
+    CharGenerationComponent,
     CharDataComponent,
     CharComponentComponent,
   ],

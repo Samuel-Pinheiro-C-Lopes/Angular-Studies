@@ -1,11 +1,11 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'servers-creation-component',
-    templateUrl: 'servers_creation.component.html',
-    styleUrls: ['servers_creation.component.css', '../../../app.component.css'] ,
+    selector: 'app-servers-creation',
+    templateUrl: 'servers-creation.component.html',
+    styleUrls: ['servers-creation.component.css', '../../../app.component.css'] ,
 })
-export class Servers_Creation_Component {
+export class ServersCreationComponent {
     serverElements?: object[] = [{type: 'server', name: 'TestServer', content: 'Just a test!'}];
 
     constructor() { }

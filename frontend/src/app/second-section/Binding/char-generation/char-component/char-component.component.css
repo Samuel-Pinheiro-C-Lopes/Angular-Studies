@@ -1,0 +1,21 @@
+.multi-elements {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.charSheet {
+    display: block;
+    margin-right: 0%;
+    border: 3px;
+    padding: 2%;
+    border-style: groove;
+    border-color: rgb(0, 0, 0);
+    background-image: url('https://res.cloudinary.com/practicaldev/image/fetch/s--BuPz-p40--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nphrgz8yfnjylrwfr0yl.png');
+}
+
+.charSheet p{
+    border-right: solid 3px black;
+}
+
+.charSheet h5{
+    border-right: solid 3px black;
+}

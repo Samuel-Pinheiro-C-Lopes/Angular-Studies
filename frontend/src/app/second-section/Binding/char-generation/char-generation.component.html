@@ -2,8 +2,10 @@
 databind between component with Angular. Data passed in the "char-data" component are used by the "char-component" to create
 a sheet for a character.</p>
 
-<app-char-data></app-char-data>
-<div style="flex-wrap: wrap; display: flex;">
+<app-char-data
+    (charCreated) = "onCharCreated($event)"></app-char-data>
+<hr />
+<div>
     <app-char-component 
         *ngFor="let char of chars"
         [characterData] = "char"    
