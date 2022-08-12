@@ -2,14 +2,14 @@
     <div class="row">
         <div class="col-xs-12">
             <h5 class="title">The For Directive</h5>
-            <p>The "for directive" - whose connotation is *for - works as 
+            <p>The "for directive" - whose connotation is: '*ngFor = "let element of arrayOfElements "'  - works as 
             the for-of loop in JS, needing an array to be passed into (the for of will then do a determined
             code piecce for each one of the arrays elements</p>
             <hr />
             <p>For of can be used to create multiple html elements based of a logic passed into the code.</p>
             <p>The button bellow will create a paragraph whose background color will change based on
-            a variable within app-servers. The *ngFor verifing array elements, and those will increse every time
-            we push a variable in it.
+            a variable within app-servers component - whose value is random. The *ngFor verifing array elements, 
+            and those will increse every time we push a variable in it.
             </p>
             <div class="multi-buttons">
                 <button 
@@ -19,7 +19,8 @@
             </div>
             <app-servers *ngFor = "let server of servers"></app-servers>
             <hr />
-            <p>For now, it's not possible to pass data between Angular Component - at least with the knowledge I have now.</p>
+            <p>For now, it's not possible to pass data between Angular Component - but you can have a grasp on it in the binding 
+            component from the second section of this application =).</p>
         </div>
     </div>
 </div>    

@@ -3,9 +3,14 @@
         <div class="col-xs-12">
             <h5 class="title">Data Binding with String Interpolation</h5>
             <div>
-                <h6>With string interpolation, we can...</h6>
-                <p>use double bracket notation to use a determined variable within our exported class to create dinamic data mutation.</p>
-                <p>this only happens while using forms module, from Angular/core, wich provides the ngModel directive.</p>
+                <h5>String Interpolation</h5>
+                <p>It's a way to embed a variable to a string, thus causing dynamic data mutation. The default notation 
+                is: double brackets with the variable name within - to then change the determined variable's inate 
+                value - therefor, being a fast and effective method to bind data throughout the application.</p>
+                <p>In the code sample bellow, a input HTML element has a ngModel directive - using forms module from 
+                Angular/core - whose value is defined once, and changes altogether with the input value.</p>
+                <!-- <p>use double bracket notation to use a determined variable within our exported class to create dinamic data mutation.</p>
+                <p>this only happens while using forms module, from Angular/core, wich provides the ngModel directive.</p> -->
                 <div class="input-btn">    
                     <input
                         class="form-control"
@@ -19,25 +24,31 @@
             <hr />
             <h5 class="title">Data Binding with Property Binding</h5>
             <div>
-                <h6>With property binding, we can...</h6>
-                <p>use the disabled property of a button and typeScript logic to enhace the website and have a dinamic button.</p>
+                <h5>Property Binding</h5>
+                <p>Property binding works in a similar way to string interpolation, since it's defined as a method to 
+                mutate data in a dynamic way whenever it's needed to (but in that case, a property instead of exclusivaly 
+                a string) - as it's seem bellow, the button's "disabled" property changes when this input's value is 
+                missing (undefined - or in that case, specificaly a empty string). It's an effective way to stylize the 
+                page through the user's interaction.</p>
+                <p>This uses the disabled property of a button and typeScript logic to enhace the website's logic and dinamy - through Angular, of course.</p>
                 <div class="input-btn">    
                     <input
                         class="form-control"
                         type="text"
-                        [(ngModel)] = "strings_interpolating[1]"/>
+                        [(ngModel)] = "strings_interpolating[1]"
+                    />
                     <button
                         class="btn btn-primary"
                         [disabled] = "strings_interpolating[1] === '' ? true : false"
                         (click) = "strings_interpolating[1] = ''">Reset Data</button>
                 </div>
-                <p *ngIf = "strings_interpolating[1]">This will be deleted as well, using this and ngIf logic.</p>
+                <p *ngIf = "strings_interpolating[1]">This will be deleted as well, using this and ngIf logic - avalaible in the "directives" component.</p>
             </div>
             <hr />
             <h5 class="title">Data Binding versus String Interpolation</h5>
             <div>
                 <p>If you want to change a property, property binding is the way to chose. If you want to change the text displayed, string interpolation can do the trick!</p>
-                <p>Of course you could use property binding to do what String Interpolation does.</p>
+                <p>Of course you could use property binding to do what String Interpolation does...</p>
                 <div class="input-btn">
                     <input
                         class="form-control"
@@ -57,7 +68,10 @@
                 </div>
                 <p [innerText] = "paragraphText"></p>
                 <hr/>
-                <p>but, we can as well use (input), $event, and a function to do exactly what string interpolation does! =)</p>
+                <p>but, we can - as well - use (input), $event, and a function to do exactly what string interpolation does! =)</p>
+                <p>A "paragraphChanger()" function receives - through $event as a parameter - the input element as argument, thus 
+                allowing it to change the text bellow, as the "innerText" property of the input bellow is binded to a 
+                "paragraphText2" variable in the backstages - it's value is mutated whenever the input value changes.</p>
                 <div class="input-btn">    
                     <input
                         class="form-control"

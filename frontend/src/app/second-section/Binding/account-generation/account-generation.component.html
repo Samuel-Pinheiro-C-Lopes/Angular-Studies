@@ -4,7 +4,8 @@ a sheet for a character.</p>
 
 <app-char-data></app-char-data>
 <div style="flex-wrap: wrap; display: flex;">
-    <app-char-component ~
+    <app-char-component 
         *ngFor="let char of chars"
+        [characterData] = "char"    
     ></app-char-component>
 </div>

@@ -1,0 +1,4 @@
+.multi-elements {
+    display: flex;
+    flex-wrap: nowrap;
+}

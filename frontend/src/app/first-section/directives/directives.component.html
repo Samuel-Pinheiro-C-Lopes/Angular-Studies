@@ -3,9 +3,11 @@
         <div class="col-xs-12">
             <h5 class="title">Directives:</h5>
             <div>
-                <p>We have several directives - whose aplications are distinct - proving to be very useful.
-                The first one I want to show is the *ngIf, wich works like an if statement, but changing the
-                structure of the html component (that's the reason it takes * before it).
+                <p>Directives are classes presents in the Angular framework that works like classes which can modify 
+                behaviors intrinsics to a determined component in the template from our application.</p>
+                <p>There are several directives - whose aplications are distinct and useful.
+                The first one to be show here is the *ngIf, wich works like an if statement, but changing the
+                structure of the html component (that's the reason it takes * before it, since it's a directive ).
                 </p>
                 <p>Paragraph bellow shall only be seen while the button is green, for example:</p> 
                     <button 
@@ -32,10 +34,10 @@
                 Using [ngStyle], we can set properties using functions exported in our components.ts, those functions
                 shall return the value needed for the CSS property.
                 </p>
-                <p>ngClass needs true or false, working as an object (like [ngStyle]) but with classes as
+                <p>ngClass needs true or false, working as an object - like [ngStyle] - but with classes as
                 keys, and booleans as values.
                 </p>
-                <div class="multi-buttons">
+                <div class="multi-elements">
                     <button
                         [disabled] = "active_button === 1"
                         style="background-color: red;" 
@@ -59,7 +61,7 @@
                 class3: active_button === 3}">
                     <div class= "divi" id="content_1">
                         <h5 class="title">Sample Text</h5>
-                        <p>This content, background content, content properties and more will be changed 
+                        <p>This content, background content, content properties and more will change 
                         based in wich button is being pressed at the momement...</p>
                         <p>This is a good showcase of how these directive can work together to form dynamic
                         web aplications, as we can see here.

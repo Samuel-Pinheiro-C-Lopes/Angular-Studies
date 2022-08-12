@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account-generation.component.css', '../../../app.component.css']
 })
 export class AccountGenerationComponent implements OnInit {
-  chars = []
+  chars: object[] = [{name: "Albion", passive:"The best: can win against almost anyone!", skill:"Win: he... wins! ^^"}]
 
   constructor() { }
 
