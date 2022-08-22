@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['../../../../app.component.css', './char-data.component.css']
 })
 export class CharDataComponent implements OnInit {
-  @Output() charCreated = new EventEmitter<{charName: string, charPassive: string, charSkill: string}>()
+  @Output() charCreated = new EventEmitter<{charName: string, charPassive: string, charSkill: string, charPassiveName: string, charSkillName: string}>()
 
   characterName: string = "";
   characterPassive: string = "";
@@ -16,7 +16,9 @@ export class CharDataComponent implements OnInit {
     this.charCreated.emit({
       charName: this.characterName,
       charPassive: this.characterPassive,
-      charSkill: this.characterSkill
+      charSkill: this.characterSkill,
+      charPassiveName: "",
+      charSkillName: "",
     })
   }
 

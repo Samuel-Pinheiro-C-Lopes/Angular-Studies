@@ -1,7 +1,14 @@
 .multi-elements {
-    display: flex;
     flex-wrap: nowrap;
+    display: flex;
 }
+
+.multi-elements p {
+    width: 100%;
+    margin-right: 2%;
+}
+
+
 .charSheet {
     display: block;
     margin-right: 0%;
@@ -14,8 +21,17 @@
 
 .charSheet p{
     border-right: solid 3px black;
+    flex-wrap: nowrap;
 }
 
 .charSheet h5{
     border-right: solid 3px black;
+}
+
+/* .charTexts{
+    flex-wrap: nowrap;
+} */
+
+strong {
+    display: inline;
 }
